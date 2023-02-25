@@ -13,7 +13,7 @@ export const Search = () => {
       setFlights([]);
     }
     if (event.target.value.length >= 3) {
-      fetch('/db/flights.json')
+      fetch(process.env.PUBLIC_URL + '/db/flights.json')
         .then((response) => response.json())
         .then((data) => {
           const searchResult = data.flights
