@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/header/header';
 import List from './components/flights-list/flights-list';
 import { useState } from 'react';
