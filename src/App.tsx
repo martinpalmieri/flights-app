@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/header';
+import List from './components/flights-list/flights-list';
+import { useState } from 'react';
+import { IFlight } from './types/Flight';
+import { FlightsContext } from './context/flights.context';
 
-function App() {
+const App = () => {
+  const [flights, setFlights] = useState<IFlight[]>([]);
+  const value = { flights, setFlights };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FlightsContext.Provider value={value}>
+      <Header />
+      <List />
+    </FlightsContext.Provider>
   );
-}
+};
 
 export default App;
