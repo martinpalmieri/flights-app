@@ -61,3 +61,14 @@ th {
 .FlightsList tbody tr:nth-child(even) {
   background-color: var(--grey-few);
 }
+
+@media only screen and (max-width: 600px) {
+  .FlightsList {
+    padding: 0 0.25em;
+  }
+  .FlightsList td,
+  th {
+    padding: 0.45em;
+    font-size: 0.7em;
+  }
+}

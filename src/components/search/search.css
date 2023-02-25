@@ -31,3 +31,10 @@
   /* Microsoft Edge */
   color: var(--grey-storm);
 }
+
+@media only screen and (max-width: 600px) {
+  .FlightSearch-input {
+    margin-left: 1em;
+    width: 45%;
+  }
+}
