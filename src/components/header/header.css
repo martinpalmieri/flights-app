@@ -1,0 +1,17 @@
+.Header {
+  height: 12vh;
+  min-height: 65px;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--grey-broken);
+}
+
+.Header-title {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35em;
+  font-weight: 900;
+  color: var(--schiphol-blue);
+}

@@ -1,0 +1,33 @@
+.FlightSearch-input {
+  font-size: 1em;
+  margin-left: 3em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  border: 2px solid var(--schiphol-blue);
+  transition: border 200ms ease-in-out;
+  color: var(--grey-storm);
+  background-color: var(--white);
+  outline: none;
+  width: 30%;
+  display: block;
+}
+
+.FlightSearch-input:focus {
+  border: 2px solid var(--afternoon-blue);
+}
+
+.FlightSearch-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--grey-storm);
+  opacity: 1; /* Firefox */
+}
+
+.FlightSearch-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--grey-storm);
+}
+
+.FlightSearch-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--grey-storm);
+}
