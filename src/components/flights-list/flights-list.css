@@ -1,0 +1,63 @@
+.FlightsList {
+  overflow: auto;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 1em;
+  margin-top: 2em;
+}
+
+.FlightsList h4 {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.FlightsList table {
+  border-collapse: collapse;
+}
+
+.FlightsList thead tr th span {
+  cursor: pointer;
+}
+
+.FlightsList thead tr th span.descending::after {
+  content: '>';
+  display: inline-block;
+  margin-left: 0.3em;
+  transform: rotate(-90deg);
+}
+
+.FlightsList thead tr th span.ascending::after {
+  content: '>';
+  display: inline-block;
+  margin-left: 0.3em;
+  transform: rotate(90deg);
+}
+
+.FlightsList th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--lightmorning-blue);
+  color: var(--schiphol-blue);
+}
+
+.FlightsList td,
+th {
+  padding: 1em;
+  text-align: left;
+  font-size: 1em;
+}
+
+.FlightsList tbody {
+  overflow: scroll;
+}
+
+.FlightsList tbody tr {
+  background-color: var(--grey-scattered);
+}
+
+.FlightsList tbody tr:nth-child(even) {
+  background-color: var(--grey-few);
+}
