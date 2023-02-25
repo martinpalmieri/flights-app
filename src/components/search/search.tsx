@@ -29,17 +29,9 @@ export const Search = () => {
     }
   };
 
-  const handleKeyDown = (event: any) => {
-    // Ver que onda aca
-    if (event.keyCode === 8) {
-      event.stopPropagation();
-    }
-  };
-
   return (
     <input
       onChange={onInputChangeHandler}
-      onKeyDown={handleKeyDown}
       name="flightSearch"
       className="FlightSearch-input"
       placeholder="Search for flights"
