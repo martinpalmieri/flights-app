@@ -5,7 +5,7 @@ import { IFlight } from './types/Flight';
 import { FlightsContext } from './context/flights.context';
 
 const App = () => {
-  const [flights, setFlights] = useState<IFlight[]>([]);
+  const [flights, setFlights] = useState<IFlight[] | undefined>(undefined);
   const value = { flights, setFlights };
 
   return (

@@ -9,7 +9,7 @@ import './flights-list.css';
 export const FlightsList = () => {
   const { flights } = useContext(FlightsContext) as FlightsContextType;
 
-  const { items, requestSort, sortConfig } = useSort(flights);
+  const { items, requestSort, sortConfig } = useSort(flights || []);
 
   const getClassNamesFor = (name: keyof IFlight) => {
     if (!sortConfig) {
@@ -73,7 +73,8 @@ export const FlightsList = () => {
           </tbody>
         </table>
       )}
-      {flights.length === 0 && <h4>Start typing to search for flights...</h4>}
+      {flights && flights.length === 0 && <h4>No results.</h4>}
+      {!flights && <h4>Start typing to search for flights...</h4>}
     </div>
   );
 };
