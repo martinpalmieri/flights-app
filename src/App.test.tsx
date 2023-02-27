@@ -37,7 +37,7 @@ it("App shows initial 'Start typing to search' message", () => {
   // eslint-disable-next-line testing-library/no-unnecessary-act
   act(() => {
     createRoot(container!).render(
-      <FlightsContext.Provider value={{ flights: [], setFlights }}>
+      <FlightsContext.Provider value={{ flights: undefined, setFlights }}>
         <Header />
         <List />
       </FlightsContext.Provider>,
@@ -46,6 +46,19 @@ it("App shows initial 'Start typing to search' message", () => {
   expect(
     screen.getByText('Start typing to search for flights...'),
   ).toBeInTheDocument();
+});
+
+it("App shows 'No results' message if flights is empty", () => {
+  // eslint-disable-next-line testing-library/no-unnecessary-act
+  act(() => {
+    createRoot(container!).render(
+      <FlightsContext.Provider value={{ flights: [], setFlights }}>
+        <Header />
+        <List />
+      </FlightsContext.Provider>,
+    );
+  });
+  expect(screen.getByText('No results.')).toBeInTheDocument();
 });
 
 it("App doest not show initial 'Start typing to search' message' if context has flights", () => {
